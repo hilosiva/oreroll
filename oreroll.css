@@ -1,0 +1,168 @@
+.oreroll {
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.oreroll[data-duration="fast"] {
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.oreroll[data-duration="normal"] {
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+.oreroll[data-duration="slow"] {
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
+}
+
+.oreroll[data-easing="linear"] {
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+}
+
+.oreroll[data-easing="ease"] {
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+}
+
+.oreroll[data-easing="ease-in"] {
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+}
+
+.oreroll[data-easing="ease-out"] {
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
+
+.oreroll[data-easing="ease-in-out"] {
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+
+.oreroll[data-easing="ease-in-expo"] {
+  -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.84, 0);
+          transition-timing-function: cubic-bezier(0.7, 0, 0.84, 0);
+}
+
+.oreroll[data-easing="ease-out-expo"] {
+  -webkit-transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+          transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.oreroll[data-easing="ease-in-out-expo"] {
+  -webkit-transition-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
+          transition-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.oreroll[data-easing="in-back"] {
+  -webkit-transition-timing-function: cubic-bezier(0.36, 0, 0.66, -0.56);
+          transition-timing-function: cubic-bezier(0.36, 0, 0.66, -0.56);
+}
+
+.oreroll[data-easing="out-back"] {
+  -webkit-transition-timing-function: cubic-bezier(0.68, -0.6, 0.32, 1.6);
+          transition-timing-function: cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+.oreroll[data-type~="fadeIn"].is-orerollReady {
+  opacity: 0;
+}
+
+.oreroll[data-type~="fadeIn"].is-orerollActive {
+  opacity: 1;
+}
+
+.oreroll[data-type~="slideUpIn"].is-orerollReady {
+  opacity: 0;
+  -webkit-transform: translateY(2.5rem);
+          transform: translateY(2.5rem);
+}
+
+.oreroll[data-type~="slideUpIn"].is-orerollActive {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.oreroll[data-type~="slideDownIn"].is-orerollReady {
+  opacity: 0;
+  -webkit-transform: translateY(-2.5rem);
+          transform: translateY(-2.5rem);
+}
+
+.oreroll[data-type~="slideDownIn"].is-orerollActive {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.oreroll[data-type~="slideLeftIn"].is-orerollReady {
+  opacity: 0;
+  -webkit-transform: translateX(2.5rem);
+          transform: translateX(2.5rem);
+}
+
+.oreroll[data-type~="slideLeftIn"].is-orerollActive {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.oreroll[data-type~="slideRightIn"].is-orerollReady {
+  opacity: 0;
+  -webkit-transform: translateX(-2.5rem);
+          transform: translateX(-2.5rem);
+}
+
+.oreroll[data-type~="slideRightIn"].is-orerollActive {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.oreroll[data-type~="zoomIn"].is-orerollReady {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.oreroll[data-type~="zoomIn"].is-orerollActive {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.oreroll[data-type~="rotateIn"].is-orerollReady {
+  opacity: 0;
+  -webkit-transform: rotate(-360deg);
+          transform: rotate(-360deg);
+}
+
+.oreroll[data-type~="rotateIn"].is-orerollActive {
+  opacity: 1;
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+
+.oreroll[data-type~="textCloseIn"].is-orerollReady {
+  opacity: 0;
+  letter-spacing: .1em;
+}
+
+.oreroll[data-type~="textCloseIn"].is-orerollActive {
+  opacity: 1;
+  letter-spacing: inherit;
+}
+
+.oreroll[data-type~="textShadowIn"].is-orerollReady {
+  color: transparent;
+  text-shadow: 0 0 5rem rgba(0, 0, 0, 0.6);
+}
+
+.oreroll[data-type~="textShadowIn"].is-orerollActive {
+  color: inherit;
+  text-shadow: 0 0 0 transparent;
+}
