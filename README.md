@@ -6,9 +6,9 @@ https://hilosiva.github.io/oreroll/
 
 
 ## Install
-HTMLファイルに `oreroll.css` と `oreroll.js` を読み込む。
-なお、現在はIE11に対応することも多いと思います。
+HTMLファイルに `oreroll.css` と `oreroll.js` を読み込んでください。
 
+なお、現在はIE11に対応することも多いと思います。
 その場合は、さらに polyfill も利用してください。
 
 https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver
@@ -48,7 +48,9 @@ https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver
 
 ## How to Use
 ### 基本の使い方
-アニメーションたい要素に、 `.oreroll` というclassを指定し、`data-type` 属性で、アニメーションの種類を指定（半角スペース区切りで複数指定可）する。
+アニメーションさせたい要素に、 `.oreroll` というclassを指定し、`data-type` 属性で、アニメーションの種類を指定します。
+
+なお、アニメーションの種類は、半角スペース区切りで複数指定することができますが、組み合わせによってはうまく動作しないものもあります。
 
 
 ```html
@@ -57,15 +59,42 @@ https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver
 ```
 
 #### アニメーションの種類
-- fadeIn
-- slideRightIn
-- slideUpIn
-- slideDownIn
-- zoomIn
-- textCloseIn
-- textShadowIn
+|  値  |  説明  |
+| ---- | ---- |
+|  fadeIn  |  フェードイン  |
+|  slideRightIn  |  左から右に移動  |
+|  slideRightIn  |  右から左に移動  |
+|  slideUpIn  |  下から上に移動  |
+|  slideDownIn  |  上から下に移動  |
+|  zoomIn  |  ズームイン  |
+|  textCloseIn  |  文字を閉じる  |
+|  textShadowIn  |  影から実体化  |
+
 
 ### オプション
+#### イージング
+
+```html
+<p class="oreroll" data-type="slideRightIn" data-easing="ease-out">減速</p>
+<p class="oreroll" data-type="zoomIn" data-easing="out-back">行き過ぎて戻ってくる</p>
+```
+
+
+#### イージングの種類
+`data-easing` 属性でイージングの種類を指定できます。
+|  値  |  説明  |
+| ---- | ---- |
+|  linear  |  一定の速度  |
+|  ease  |  ゆるやかな加速減速  |
+|  ease-in  |  加速  |
+|  ease-out  |  減速  |
+|  ease-in-out  |  加速減速（初期値）  |
+|  ease-in-expo  |  強めの加速  |
+|  ease-out-expo  |  強めの減速  |
+|  in-back  |  一旦下がって加速  |
+|  out-back  |  行き過ぎて戻って減速  |
+
+
 #### デュレーション
 `data-duration` 属性を `fast` 、 `normal`、`slow` のいずれかで指定。
 
@@ -75,10 +104,14 @@ https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver
 <p class="oreroll" data-type="zoomIn textClosing" data-duration="slow">Zoom In &amp; Text Closing</p>
 ```
 
-デフォルトのスピード
-- fast ・・・ 0.3s
-- normal ・・・ 1s
-- slow ・・・ 2s
+#### デュレーションの種類
+
+|  値  |  説明  |
+| ---- | ---- |
+|  fast  |  0.3秒  |
+|  normal  |  1秒（初期値）  |
+|  slow  |  2秒  |
+
 
 ですが、`oreroll.scss` の中の冒頭の変数で自由変更して下さい。
 
