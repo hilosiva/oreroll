@@ -75,7 +75,7 @@ https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver
 #### イージング
 
 ```html
-<p class="oreroll" data-type="slideRightIn" data-easing="ease-out">減速</p>
+<p class="oreroll" data-type="slideRightIn" data-easing=" ease-out-expo">勢いよく減速</p>
 <p class="oreroll" data-type="zoomIn" data-easing="out-back">行き過ぎて戻ってくる</p>
 ```
 
@@ -87,8 +87,8 @@ https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver
 |  linear  |  一定の速度  |
 |  ease  |  ゆるやかな加速減速  |
 |  ease-in  |  加速  |
-|  ease-out  |  減速  |
-|  ease-in-out  |  加速減速（初期値）  |
+|  ease-out  |  減速（初期値）  |
+|  ease-in-out  |  加速減速  |
 |  ease-in-expo  |  強めの加速  |
 |  ease-out-expo  |  強めの減速  |
 |  in-back  |  一旦下がって加速  |
