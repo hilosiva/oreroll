@@ -1,6 +1,6 @@
 {
   "name": "@hilosiva/oreroll",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "俺流スクロールアニメーション",
   "type": "module",
   "main": "dist/index.js",
@@ -13,6 +13,14 @@
   "keywords": [
     "scrollObserver"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hilosiva/oreroll"
+  },
+  "bugs": {
+    "url": "https://github.com/hilosiva/oreroll/issues"
+  },
+  "homepage": "https://shibajuku.net/demo/oreroll/",
   "author": "Shibata Hironori",
   "license": "MIT",
   "devDependencies": {

@@ -4,16 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Oreroll</title>
+    <link rel="stylesheet" href="style.css" />
     <script type="module" src="../dist/main.js"></script>
     <script src="app.js" defer></script>
   </head>
   <body>
     <h1>Oreroll</h1>
     <div style="height: 100vh" data-scrub data-inview-target="#test">
-      <p id="test">test</p>
+      <p id="test" class="box">test</p>
     </div>
-    <div style="height: 100vh" data-trigger>
-      <p>test</p>
+    <div style="height: 100vh" data-trigger="fadeIn">
+      <p class="box">test</p>
+    </div>
+    <div style="height: 100vh" data-trigger="slideUpIn">
+      <p class="box">test</p>
     </div>
   </body>
 </html>
